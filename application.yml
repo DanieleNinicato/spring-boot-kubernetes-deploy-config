@@ -7,7 +7,7 @@ spec:
   project: default
 
   source:
-    repoUrl: https://github.com/DanieleNinicato/spring-boot-kubernetes-deploy-config.git
+    repoURL: https://github.com/DanieleNinicato/spring-boot-kubernetes-deploy-config.git
     targetRevision: HEAD
     path: dev
   destination:
