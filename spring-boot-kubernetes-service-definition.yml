@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: spring-boot-kubernetes
+  name: spring-boot-kubernetes
+spec:
+  ports:
+  - name: spring-boot-kubernetes
+    port: 8080
+    protocol: TCP
+    targetPort: 8080
+    nodePort: 30004
+  selector:
+    app: spring-boot-kubernetes
+  type: NodePort
