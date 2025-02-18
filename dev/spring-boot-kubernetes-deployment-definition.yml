@@ -14,5 +14,5 @@ spec:
       name: spring-boot-kubernetes
     spec:
       containers:
-        - image: danieleninicato/spring-boot-kubernetes
+        - image: danieleninicato/spring-boot-kubernetes:v2
           name: spring-boot-kubernetes
