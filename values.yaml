@@ -1,0 +1,16 @@
+springBootKubernetes:
+  replicaCount: 2
+
+  image:
+    repository: danieleninicato/spring-boot-kubernetes
+    tag: v2
+    pullPolicy: IfNotPresent
+
+  service:
+    type: NodePort
+    port: 8081
+    targetPort: 8081
+    nodePort: 30081
+
+  selectorLabels:
+    app: spring-boot-kubernetes

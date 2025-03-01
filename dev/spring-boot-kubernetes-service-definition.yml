@@ -7,10 +7,10 @@ metadata:
 spec:
   ports:
   - name: spring-boot-kubernetes
-    port: 8080
+    port: 8081
     protocol: TCP
-    targetPort: 8080
-    nodePort: 30004
+    targetPort: 8081
+    nodePort: 30081
   selector:
     app: spring-boot-kubernetes
   type: NodePort

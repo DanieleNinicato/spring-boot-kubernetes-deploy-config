@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Chart.Name }}
+spec:
+  replicas: {{ .Values.springBootKubernetes.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ .Values.springBootKubernetes.selectorLabels.app }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.springBootKubernetes.selectorLabels.app }}
+    spec:
+      containers:
+        - name: {{ .Chart.Name }}
+          image: "{{ .Values.springBootKubernetes.image.repository }}:{{ .Values.springBootKubernetes.image.tag }}"
+          imagePullPolicy: {{ .Values.springBootKubernetes.image.pullPolicy }}
+          ports:
+            - containerPort: {{ .Values.springBootKubernetes.service.port }}
