@@ -10,7 +10,7 @@ spec:
     port: 8081
     protocol: TCP
     targetPort: 8081
-    nodePort: 30081
+    nodePort: 30004
   selector:
     app: spring-boot-kubernetes
   type: NodePort
